@@ -1,7 +1,7 @@
 # nichijid-rs (nichiji daemon rs)
 
 It's a implementation of "TCP Based Daytime Service" [Daytime Protocol [RFC867]](https://datatracker.ietf.org/doc/html/rfc867).
-It replies with a Japanese pronunciation of the server's local time.
+It replies with a ***Japanese pronunciation*** of the server's local time.
 
 Collaborator: @kory33
 
