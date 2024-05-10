@@ -6,9 +6,9 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-chrono = "0.4.26"
-clap = { version = "4.3.22", features = ["derive"] }
-rstest = "0.18.1"
-tokio = { version = "1.30.0", features = ["macros", "rt-multi-thread", "net", "io-util"] }
-tracing = "0.1.37"
-tracing-subscriber = "0.3.17"
+chrono = "0.4.38"
+clap = { version = "4.5.4", features = ["derive"] }
+rstest = "0.19.0"
+tokio = { version = "1.37.0", features = ["macros", "rt-multi-thread", "net", "io-util"] }
+tracing = "0.1.40"
+tracing-subscriber = "0.3.18"
