@@ -3,7 +3,7 @@
 It's a implementation of "TCP Based Daytime Service" [Daytime Protocol [RFC867]](https://datatracker.ietf.org/doc/html/rfc867).
 It replies with a ***Japanese pronunciation*** of the server's local time.
 
-Collaborator: @kory33
+Collaborator: [@kory33](https://github.com/kory33)
 
 > [!NOTE]
 > For machine useful time use the Time Protocol (RFC-868) [yanorei32/timed-rs](https://github.com/yanorei32/timed-rs).
