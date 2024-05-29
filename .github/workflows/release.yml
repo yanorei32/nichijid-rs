@@ -103,7 +103,7 @@ jobs:
         with:
           tag_name: "latest"
           prerelease: true
-          title: "Development Build"
+          name: "Development Build"
           files: |
             nichijid-rs-windows.zip
             nichijid-rs-linux.zip
