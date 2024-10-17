@@ -21,7 +21,7 @@ COPY src/ /usr/src/nichijid-rs/src/
 
 RUN touch src/* && cargo build --release
 
-FROM debian:bullseye-slim@sha256:7aeed6a27ac8a3d2c4e969bcce0c37052a1d676e5032e0c2fac2ee9910ec9efb
+FROM debian:bullseye-slim@sha256:c58162df7471e5553242d42578a00bbbe4ff06a701549afa9b9675aa4ae90268
 
 WORKDIR /
 
