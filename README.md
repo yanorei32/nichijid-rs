@@ -22,6 +22,6 @@ NOTE: 13 is a well-known port. It may require administrative permission.
 ### Client
 
 ```
-$ nc localhost 13
+$ nc -d localhost 13
 ni-sen ni-juu san nen hachi gatsu juu hachi nichi kin youbi juu ji roppun juu san byou
 ```

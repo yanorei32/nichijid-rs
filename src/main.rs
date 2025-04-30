@@ -3,8 +3,6 @@ use std::net::SocketAddr;
 use chrono::{Datelike, Local, Timelike, Weekday};
 use clap::Parser;
 use tokio::{io::AsyncWriteExt, net::TcpListener};
-use tracing::info;
-use tracing_subscriber;
 
 #[must_use]
 fn nonzero_digit_to_generic_yomi(digit: u32) -> &'static str {
@@ -369,19 +367,22 @@ struct Cli {
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     tracing_subscriber::fmt::init();
+
     let c = Cli::parse();
     let listener = TcpListener::bind(c.host).await?;
-    let addr = listener.local_addr()?;
-    info!("Server is ready on {addr}");
+    tracing::info!("Server is ready on {}", c.host);
 
     loop {
         let (mut socket, addr) = listener.accept().await?;
-        info!("Accept request from: {addr}");
+        tracing::info!("Accept request from: {addr}");
 
         tokio::spawn(async move {
+            let (_rx, mut tx) = socket.split();
+
             let s = format_datetime(&Local::now());
-            if let Err(v) = socket.write_all(&s.into_bytes()).await {
-                info!("Something went wrong: {v}");
+
+            if let Err(v) = tx.write_all(&s.into_bytes()).await {
+                tracing::info!("Something went wrong: {v}");
             };
         });
     }
