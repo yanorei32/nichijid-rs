@@ -163,7 +163,7 @@ fn day_to_yomi(day: u32) -> String {
             7 => "nanoka",
             8 => "youka",
             9 => "kokonoka",
-            10 => "touka",
+            10 => "tooka",
             _ => unreachable!(),
         }
         .to_string();
