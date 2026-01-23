@@ -44,7 +44,7 @@ jobs:
     runs-on: ${{ matrix.ghimage }}
 
     steps:
-      - uses: actions/checkout@v6.0.1
+      - uses: actions/checkout@v6.0.2
         with:
           submodules: true
 
@@ -134,7 +134,7 @@ jobs:
     runs-on: ${{ matrix.ghimage }}
 
     steps:
-      - uses: actions/checkout@v6.0.1
+      - uses: actions/checkout@v6.0.2
 
       - name: Get Rust toolchain
         id: toolchain
@@ -188,7 +188,7 @@ jobs:
     runs-on: ${{ matrix.ghimage }}
 
     steps:
-      - uses: actions/checkout@v6.0.1
+      - uses: actions/checkout@v6.0.2
 
       - uses: docker/metadata-action@v5.10.0
         id: meta
